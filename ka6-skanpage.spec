@@ -43,6 +43,7 @@ BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	tesseract-devel >= 5
 BuildRequires:	xz
+Requires(post,postun):	desktop-file-utils
 Obsoletes:	ka5-%{kaname} < %{version}
 Conflicts:	kde4-libksane >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -78,6 +79,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post
+%update_desktop_database_post
+
+%postun
+%update_desktop_database_postun
 
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
