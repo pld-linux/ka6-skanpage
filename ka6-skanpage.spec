@@ -46,6 +46,7 @@ BuildRequires:	xz
 Requires(post,postun):	desktop-file-utils
 Obsoletes:	ka5-%{kaname} < %{version}
 Conflicts:	kde4-libksane >= 4.0
+ExcludeArch:	x32 i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
