@@ -51,9 +51,28 @@ ExcludeArch:	x32 i686
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Skanpage is a multi-page scanning application built using the
-KSaneCore library and a QML interface. It supports saving to image and
-PDF files. It uses tesseract as an OCR engine.
+Skanpage is a simple scanning application optimized for multi-page
+document scanning. It can also scan and save single-page documents and
+images.
+
+Features:
+
+- Scanning from flatbed and ADF scanners
+- Configurable options for scanning device
+- Reordering, rotation, and deletion of scanned pages
+- Saving to multi-page PDF documents and image files
+
+%description -l pl.UTF-8
+Skanpage jest prostym programem opracowany do wielostronicowego
+skanowania dokumentów. Może także skanować i zapisywać
+jednostronnicowe dokumenty i obrazy.
+
+Możliwości:
+
+- Skanowanie na skanerach płaskich oraz ADF
+- Możliwość zmiany ustawień urządzenia skanującego
+- Zmiana kolejności, obrót i usuwanie zeskanowanych stron
+- Zapisywanie wielostronicowych dokumentów PDF i plików obrazów
 
 %prep
 %setup -q -n %{kaname}-%{version}
