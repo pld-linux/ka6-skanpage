@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		skanpage
 Summary:	A multi-page scanning application
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	183143c7cc3fc15d7932ffa8f7cbf1bf
+# Source0-md5:	14f7bba1d9161f5d678257468a3c2e46
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= %{qtver}
